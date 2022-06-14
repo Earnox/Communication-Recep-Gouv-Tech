@@ -13,30 +13,33 @@ require_once '../header/navbar.php';
 
 <body>
   <header>
-    <?php echo $title ?>
-    <?php echo $navbar ?>
-    <header>
+    <?php echo $title ?> <?php echo $navbar ?> </header>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Welcome to the home page</h1>
-          </div>
 
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
-            voluptatibus. Cum est quis, aspernatur eaque perferendis, adipisci at, quisquam similique perspiciatis nobis
-            error reiciendis facilis!</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
-            voluptatibus. Cum est quis, aspernatur eaque perferendis, adipisci at, quisquam similique perspiciatis nobis
-            error reiciendis facilis!</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
-            voluptatibus. Cum est quis, aspernatur eaque perferendis, adipisci at, quisquam similique perspiciatis nobis
-            error reiciendis facilis!</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
-            voluptatibus. Cum est quis, aspernatur eaque perferendis, adipisci at, quisquam similique perspiciatis nobis
-            error reiciendis facilis!</p>
-          <p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Welcome to the home page</h1>
+      </div>
 
-          </p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
+        voluptatibus. Cum est quis, aspernatur eaque perferendis, adipisci at, quisquam similique perspiciatis nobis
+        error reiciendis facilis!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
+        voluptatibus. Cum est quis, aspernatur eaque perferendis, adipisci at, quisquam similique perspiciatis nobis
+        error reiciendis facilis!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
+        voluptatibus. Cum est quis, aspernatur eaque perferendis, adipisci at, quisquam similique perspiciatis nobis
+        error reiciendis facilis!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
+        voluptatibus. Cum est quis, aspernatur eaque perferendis, adipisci at, quisquam similique perspiciatis nobis
+        error reiciendis facilis!</p>
+      <p>
 
-        </div>
+      </p>
+
+    </div>
+  </div>
+</body>
+
+</html>

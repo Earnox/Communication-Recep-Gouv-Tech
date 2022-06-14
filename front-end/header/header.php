@@ -1,2 +1,5 @@
 <?php
-$title = '<h1> Welcome to the home page </h1>';
+$title = '
+<div class="container-title">
+      <h1>Welcome to the home page</h1>
+  </div>';

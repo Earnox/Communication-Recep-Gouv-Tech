@@ -1,0 +1,4 @@
+{
+  "files.refactoring.autoSave": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": false
+}
