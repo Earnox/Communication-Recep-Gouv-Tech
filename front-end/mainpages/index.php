@@ -19,10 +19,10 @@ require_once '../header/navbar.php';
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Welcome to the home page</h1>
+        <h1>Welcome to the home page testtt</h1>
       </div>
 
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
+      <p id='test'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
         voluptatibus. Cum est quis, aspernatur eaque perferendis, adipisci at, quisquam similique perspiciatis nobis
         error reiciendis facilis!</p>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
