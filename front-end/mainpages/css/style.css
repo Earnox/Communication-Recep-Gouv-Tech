@@ -5,6 +5,7 @@
 
 * {
   box-sizing: border-box;
+  background-color: #438eb9;
 }
 
 body {
@@ -13,7 +14,10 @@ body {
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.red {
+  background-color: aqua;
+  color: aquamarine;
+}
 h1 {
   color: red;
   background-color: var(yellow);

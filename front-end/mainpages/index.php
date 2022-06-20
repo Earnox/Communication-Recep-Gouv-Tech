@@ -3,7 +3,7 @@ require_once '../header/header.php';
 require_once '../header/navbar.php';
 
 ?>
-<html>
+<!DOCTYPE html>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@ require_once '../header/navbar.php';
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Welcome to the home page testtt</h1>
+        <h1>Welcome to the home page </h1>
       </div>
 
       <p id='test'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A neque, debitis doloremque ex ipsam
@@ -40,6 +40,8 @@ require_once '../header/navbar.php';
 
     </div>
   </div>
+
+  <div class="red">test </div>
 </body>
 
 </html>
