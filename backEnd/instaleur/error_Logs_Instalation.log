@@ -33,21 +33,6 @@ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in you
 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 13
 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 13
 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 13
-  if ($bddInterventionTech->exec('CREATE TABLE interventionEnCOur (
-                id INT(11) PRIMARY KEY AUTO_INCREMENT,
-                postEmployer VARCHAR (100),
-                dateDemandeIntervention DATE,
-                lieu VARCHAR (100),
-                nature_Intevention VARCHAR (500),
-                risque varchar(500),
-                info_statut_app varchar(255),
-                date_intevention DATE,
-                remarque_intervention VARCHAR(500),
-                statut_intervention varchar(50),
-
-            )') !== false) {
-                echo 'bdd crée :) <br> '.PHP_EOL;
-            }SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 13
 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 13
 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 13
 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 13
