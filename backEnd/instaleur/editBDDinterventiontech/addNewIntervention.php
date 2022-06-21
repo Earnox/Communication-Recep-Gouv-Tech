@@ -7,8 +7,6 @@ $nvintervention = new nouvelleInterventionTech();
     $nvintervention->nature_Intevention='steven est constiper lui ramneée des médoc';
    $nvintervention->risque='sa peux couler';
     $nvintervention->info_statut_app='rien';
-    $nvintervention->date_intevention = 28-05-2012;
-    $nvintervention->info_statut_app='libre';
     $bddInterventionTech = new PDO('mysql:host=localhost:3307;dbname=interventionTechnique;','root','');
 //    if($bddInterventionTech->exec('INSERT INTO interventionencour( postEmployer,
 //                dateDemandeIntervention,
@@ -24,19 +22,17 @@ $nvintervention = new nouvelleInterventionTech();
 //$statement = $pdo->prepare(“SELECT * FROM users WHERE `username`=:username AND
 //6
 //  ` pass`=:pass”);
-   $newInter = $bddInterventionTech->prepare("INSERT INTO interventionencour( dateDemandeIntervention,
+   $newInter = $bddInterventionTech->prepare("INSERT INTO interventionencour( 
  lieu ,
 nature_Intevention,
 risque,
-info_statut_app ,
- date_intevention,
-remarque_intervention,
-statut_intervention
-) VALUES( ':lieu',':nature_Intevention',':risque',':info_statut_app' ,)");
+info_statut_app) 
+VALUES( ':lieu',':nature_Intevention',':risque',':info_statut_app')");
     $newInter->bindValue(':lieu',$nvintervention->lieu,PDO::PARAM_STR);
     $newInter->bindValue(':nature_Intevention',  $nvintervention->nature_Intevention,PDO::PARAM_STR);
     $newInter->bindValue(':risque',$nvintervention->risque,PDO::PARAM_STR);
     $newInter->bindValue(':info_statut_app',$nvintervention->info_statut_app,PDO::PARAM_STR);
+    $newInter->execute();
 //    {
 //        echo 'info ajouter ';
 //
