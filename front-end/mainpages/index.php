@@ -19,9 +19,16 @@ require_once '../header/navbar.php';
     echo $title ?> <?php
 
     echo $navbar ?> </header>
-  <form action="action.php" method="post">
-      <p>lieu: <input type="text" name="lieu" /></p>
+  <form action="../../backEnd/traitementIntervention/getNewIntervention.php" method="post">
+      <p>post: <input type="text" name="lieu" /></p>
+      <p>lieu: <input type="text" name="postEmployer" /></p>
       <p>nature Intevention: <input type="text" name="nature_Intevention" /></p>
+      <p>risque: <input type="text" name="risque" /></p>
+      <p>dateDemandeIntervention: <input type="date" name="dateDemandeIntervention" /></p>
+      <p>date_intevention: <input type="date" name="date_intevention" /></p>
+      <p>remarque: <input type="remarque_intervention" name="remarque_intervention" /></p>
+      <p>info_statut_app: <input type="text" name="info_statut_app" /></p>
+      <p>statut_intervention: <input type="text" name="statut_intervention" /></p>
       <p><input type="submit" value="OK"></p>
   </form>
 
