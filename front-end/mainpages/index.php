@@ -20,7 +20,7 @@ require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php
 
       echo $title ?> <?php
 
-                    echo $navbar ?> </header>
+                      echo $navbar ?> </header>
     <form action="../../backEnd/traitementIntervention/getNewIntervention.php" method="post">
       <p>post: <input type="text" name="lieu" /></p>
       <p>lieu: <input type="text" name="postEmployer" /></p>
