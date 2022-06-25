@@ -1,7 +1,7 @@
 <?php
-require_once '../application_Gouv_tech/backEnd/inculde/include.php';
 require_once '../header/header.php';
 require_once '../header/navbar.php';
+require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php'
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -31,6 +31,7 @@ require_once '../header/navbar.php';
     <p>date_intevention: <input type="date" name="date_intevention" /></p>
     <p>remarque: <input type="text" name="remarque_intervention" /></p>
     <p>statut_intervention: <input type="text" name="statut_intervention" /></p>
+
     <p><input type="submit" value="OK"></p>
   </form>
   <main>
@@ -49,6 +50,7 @@ require_once '../header/navbar.php';
           <th>info Menage</th>
           <th>Date de réalisation</th>
           <th>Remarques</th>
+          <th>Edite</th>
           <th>Statut</th>
         </tr>
       </thead>
@@ -67,6 +69,7 @@ require_once '../header/navbar.php';
           <?php
             }
             ?>
+          <td><button> edit</button></td>
         <tr>
           <?php
         } ?>
