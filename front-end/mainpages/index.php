@@ -1,7 +1,7 @@
 <?php
+require_once '../application_Gouv_tech/backEnd/inculde/include.php';
 require_once '../header/header.php';
 require_once '../header/navbar.php';
-require_once '../application_Gouv_tech/inculde/include.php'
 ?>
 <!DOCTYPE html>
 <html lang="fr">
