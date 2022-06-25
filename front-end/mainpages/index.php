@@ -1,7 +1,7 @@
 <?php
 require_once '../header/header.php';
 require_once '../header/navbar.php';
-require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php'
+require_once './inculde/include.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

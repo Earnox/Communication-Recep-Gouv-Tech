@@ -1,6 +1,6 @@
 <?php
 // funtion to add a new intervention tech
-require_once '../instaleur/editBDDinterventiontechOld/interventionTech.php';
+require_once '../application_Gouv_tech/inculde/include.php';
 // script.php.
 
 try {
