@@ -6,8 +6,6 @@ function getAllInterProgress()
 
 
   try {
-
-
     $pdoBDdinterventionEnCour = new PDO('mysql:host=localhost:3307;dbname=interventionTechnique;', 'root', '');
     $sqlGetInterventionProgress = "
 SELECT * FROM interventionencour";

@@ -1,6 +1,6 @@
 <?php
 // funtion to add a new intervention tech
-require_once './inculde/include.php';
+require_once '../all_Include/include.php';
 try {
 
     $bddInterventionTech = new PDO('mysql:host=localhost:3307;dbname=interventionTechnique;', 'root', '');

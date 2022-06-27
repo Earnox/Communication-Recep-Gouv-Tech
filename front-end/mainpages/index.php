@@ -22,7 +22,8 @@ require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php
     <?php
     echo $navbar ?>
   </header>
-  <form action="../../backEnd/traitementIntervention/getNewIntervention.php" method="post" class="form-inter">
+  <form action="../../backEnd/traitementIntervention/edit_Intervention.php" method="post" class="form-inter"
+    enctype="multipart/form-data">
     <p>dateDemandeIntervention: <input type="date" name="dateDemandeIntervention" /></p>
     <p>post: <input type="text" name="postEmployer" /></p>
     <p>lieu: <input type="text" name="lieu" /></p>
@@ -32,7 +33,7 @@ require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php
     <p>date_intevention: <input type="date" name="date_intevention" /></p>
     <p>remarque: <input type="text" name="remarque_intervention" /></p>
     <p>statut_intervention: <input type="text" name="statut_intervention" /></p>
-
+    <input type="file" id="photo_intervention" name="photo_intervention" accept="image/png, image/jpeg">
     <p><input type="submit" value="OK"></p>
   </form>
   <main>
@@ -51,8 +52,9 @@ require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php
           <th>info Menage</th>
           <th>Date de réalisation</th>
           <th>Remarques</th>
-          <th>Edite</th>
           <th>Statut</th>
+          <th>Edite</th>
+          <th>Photo</th>
         </tr>
       </thead>
       <tbody>
@@ -70,7 +72,14 @@ require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php
           <?php
             }
             ?>
-          <td><button> edit</button></td>
+          <td>
+            <form action="../../backEnd/traitementIntervention/edit_Intervention.php">
+              <button type="submit" method="post" class="form-inter"> edit</button>
+            </form>
+          </td>
+
+          <td> <input type="photo" id="photo_intervention" name="photo_intervention" accept="image/png, image/jpeg">
+          </td>
         <tr>
           <?php
         } ?>

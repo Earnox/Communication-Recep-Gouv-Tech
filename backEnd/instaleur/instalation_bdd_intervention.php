@@ -5,10 +5,10 @@ try {
     // ici faire une page qui vérifi si la page existe sinon on vien ici 
     if ($pdo->exec('DROP DATABASE IF EXISTS interventionTechnique') !== false) {
         echo 'bdd detruite <br> ' . PHP_EOL;
-        if ($pdo->exec('CREATE DATABASE interventionTechnique') !== false) {
+        if ($pdo->exec('CREATE DATABASE Residence_isatis') !== false) {
             echo 'creation de la bdd reussi <br>  ' . PHP_EOL;
 
-            $bddInterventionTech = new PDO('mysql:host=localhost:3307;dbname=interventionTechnique;', 'root', '');
+            $bddInterventionTech = new PDO('mysql:host=localhost:3307;dbname=Residence_isatis;', 'root', '');
 
             if ($bddInterventionTech->exec('CREATE TABLE interventionEnCOur (
                id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -21,7 +21,7 @@ try {
                 date_intevention DATE,
                 remarque_intervention VARCHAR(255),
                 statut_intervention VARCHAR(255)             
-               
+            --    img VARCHAR(500) ensuite lie limage directement dans src dans les balise 
 
             );') !== false) {
                 echo 'bdd crée :) <br> ' . PHP_EOL;

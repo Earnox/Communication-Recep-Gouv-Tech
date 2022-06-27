@@ -1,7 +1,8 @@
 <?php
+$link = './forms/test.php';
 $navbar =   '<div class="topnav">
   <a class="active" href="#home">Home</a>
-  <a href="#about">About</a>
+  <a href="../forms/test.php">About</a>
   <a href="#contact">Contact</a>
   <div class="search-container">
     <form action="/action_page.php">

@@ -1,6 +1,7 @@
 <?php
 // funtion to add a new intervention tech
-require_once '../inculde/include.php';
+require_once '../all_Include/include.php';
+require_once '../traitement_IMG/traitement_img.php';
 // script.php.
 
 try {
