@@ -39,3 +39,6 @@ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in you
 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 13
 Probleme instalation BDDSQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 11
 Probleme instalation BDDSQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 11
+Probleme instalation BDDSQLSTATE[42S01]: Base table or view already exists: 1050 Table 'interventionencour' already exists
+Probleme instalation BDDSQLSTATE[HY000]: General error: 1007 Can't create database 'residence_isatis'; database exists
+Probleme instalation BDDSQLSTATE[HY000]: General error: 1007 Can't create database 'residence_isatis'; database exists

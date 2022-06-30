@@ -3,7 +3,7 @@
 try {
     $pdo = new PDO('mysql:host=localhost:3307;', 'root', '');
     // ici faire une page qui vérifi si la page existe sinon on vien ici 
-    if ($pdo->exec('DROP DATABASE IF EXISTS interventionTechnique') !== false) {
+    if ($pdo->exec('DROP DATABASE IF EXISTS Residence_isatis') !== false) {
         echo 'bdd detruite <br> ' . PHP_EOL;
         if ($pdo->exec('CREATE DATABASE Residence_isatis') !== false) {
             echo 'creation de la bdd reussi <br>  ' . PHP_EOL;

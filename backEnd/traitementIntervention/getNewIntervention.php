@@ -46,7 +46,7 @@ try {
     $newInter->execute();
     $last_isertID = ($pdoBDdinterventionEnCour->lastInsertId() + 1);
     $photo = $_FILES;
-    var_dump($photo);
+    // funtion to get create image to save it and return the path 
     traitement_img($last_isertID, $photo, $_POST);
     return $newInter->fetchAll();
 } catch (PDOException $error) {
