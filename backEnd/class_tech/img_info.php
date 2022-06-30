@@ -4,10 +4,12 @@ class img_info
 {
   public int $id_tech;
   public string $lieu_intervention;
-  public function __construct(int $id_tech, string $lieu_intervention)
+  public string $extention_photo;
+  public function __construct(int $id_tech, string $lieu_intervention, string $extention_photo)
   {
     $this->id_tech = $id_tech;
     $this->lieu_intervention = $lieu_intervention;
+    $this->extention_photo = $extention_photo;
   }
 
 
@@ -24,17 +26,20 @@ class img_info
       $sqlnewPhoto = $pdoBDresidence->prepare(
         "INSERT INTO path_Image( 
     id_tech,
-    lieu_tech
+    lieu_tech,
+    extention_photo
      ) 
     VALUES(  
     :id_tech,
-    :lieu_tech      
+    :lieu_tech ,
+    :extention_photo     
    )"
       );
 
 
       $sqlnewPhoto->bindValue(':id_tech', $this->id_tech, PDO::PARAM_INT);
       $sqlnewPhoto->bindValue(':lieu_tech', $this->lieu_intervention, PDO::PARAM_STR);
+      $sqlnewPhoto->bindValue('::extention_photo', $this->extention_photo, PDO::PARAM_STR);
       $sqlnewPhoto->execute();
       // funtion to get create image to save it and return the path 
       return $sqlnewPhoto->fetchAll();
