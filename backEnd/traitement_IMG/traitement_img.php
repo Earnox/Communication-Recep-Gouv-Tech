@@ -24,9 +24,11 @@ function traitement_img($new_id, $FILES, $POST)
         // Scripts à exécuter quand les contrôles sont bons. 
 
 
-        var_dump($FILES);
+
         $photo_name = renamephoto($new_id, $FILES, $POST,);
-        $sql_img = new img_info($new_id, $POST['lieu'], $fileInfo['extension']);
+        var_dump($new_id, $POST['lieu'], $fileInfo['extension']);
+        $new_id_int = intval($new_id);
+        $sql_img = new img_info($new_id_int, $POST['lieu'], $fileInfo['extension']);
         $sql_img->insetPatchImage();
         //  ici il faudrat appeler la function / constructor 
         var_dump(move_uploaded_file($FILES['photo_intervention']['tmp_name'], "$directory/$photo_name"));

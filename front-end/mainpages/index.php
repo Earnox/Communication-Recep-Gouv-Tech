@@ -83,7 +83,9 @@ require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php
             </form>
           </td>
 
-          <td> <input type="photo" id="photo_intervention" name="photo_intervention" accept="image/png, image/jpeg">
+          <td>
+            <!-- <input type="photo" id="photo_intervention" name="photo_intervention" accept="image/png, image/jpeg"> -->
+
           </td>
         <tr>
           <?php

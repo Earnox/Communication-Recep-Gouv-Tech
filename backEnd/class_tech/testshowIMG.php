@@ -3,7 +3,8 @@ require_once '../../front-end/header/header.php';
 require_once '../../front-end/header/navbar.php';
 try {
   $pdoBDresidence = new PDO('mysql:host=localhost:3307;dbname=Residence_isatis;', 'root', '');
-  $sql_Get_photo_path = "SELECT `id_tech`, `lieu_tech` FROM `path_image`";
+  $sql_Get_photo_path = "SELECT `id_tech`, `lieu_tech`, `extention_Photo` FROM `path_image`";
+
   $requet_Get_path = $pdoBDresidence->prepare($sql_Get_photo_path);
   if ($requet_Get_path->execute()) {
 
@@ -38,18 +39,25 @@ try {
     <?php
     echo $navbar ?>
   </header>
+  <?php
 
-  <body>
-    <?php
+  foreach ($all_path_photo as $value) {
+    # code...
+
+    // her wil need to change the pathe to relative or not but need to change when change files 
+    $path_directory_file = '../traitementIntervention/image_intervention_Tech/';
+    $path = "$path_directory_file\\$value[id_tech]-$value[lieu_tech].$value[extention_Photo]";
+
+    echo 'test';
+
+    echo "<img src='$path'  alt='' width='60' height='60'>";
+  }
+
+  ?>
 
 
-    foreach ($all_path_photo as $key => $value) {
-      # code...
-      var_dump($value);
-      $path = "$value[id_tech]-$value[lieu_tech].";
-    }
+</body>
 
-    ?>
-  </body>
+
 
 </html>

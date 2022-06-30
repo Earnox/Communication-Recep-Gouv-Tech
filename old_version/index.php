@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="style1.css" />
 
-  <title><?php echo 'bonjour je suis un test'?></title>
+  <title><?php echo 'bonjour je suis un test' ?></title>
 </head>
 
 <body>

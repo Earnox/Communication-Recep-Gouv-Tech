@@ -39,7 +39,7 @@ class img_info
 
       $sqlnewPhoto->bindValue(':id_tech', $this->id_tech, PDO::PARAM_INT);
       $sqlnewPhoto->bindValue(':lieu_tech', $this->lieu_intervention, PDO::PARAM_STR);
-      $sqlnewPhoto->bindValue('::extention_photo', $this->extention_photo, PDO::PARAM_STR);
+      $sqlnewPhoto->bindValue(':extention_photo', $this->extention_photo, PDO::PARAM_STR);
       $sqlnewPhoto->execute();
       // funtion to get create image to save it and return the path 
       return $sqlnewPhoto->fetchAll();
