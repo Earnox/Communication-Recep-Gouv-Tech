@@ -1,5 +1,5 @@
 <?php
-
+require_once 'C:\xampp\htdocs\application_Gouv_tech\backEnd\all_Include\include.php';
 function renamephoto($new_id, $photo, $post)
 {
   // here funtion to get the info of in img to put extension 
@@ -11,7 +11,7 @@ function traitement_img($new_id, $FILES, $POST)
 {
   $directory = 'C:\xampp\htdocs\application_Gouv_tech\backEnd\traitementIntervention\image_intervention_Tech';
   if (!is_dir($directory)) {
-    echo ' on est ici ';
+
     var_dump(mkdir($directory, 0777));
   }
   $extensions = array('jpg', 'png', 'gif');
@@ -24,8 +24,14 @@ function traitement_img($new_id, $FILES, $POST)
         // Scripts à exécuter quand les contrôles sont bons. 
 
 
+        var_dump($FILES);
+        $photo_name = renamephoto($new_id, $FILES, $POST,);
+        $sql_img = new img_info($new_id, $fileInfo['extension']);
+        $sql_img->insetPatchImage();
+        //  ici il faudrat appeler la function / constructor 
+        var_dump(move_uploaded_file($FILES['photo_intervention']['tmp_name'], "$directory/$photo_name"));
 
-
+        echo 'Le fichier a été envoyé sur le serveur';
       } else {
         echo 'Ce extension de fichier est interdit';
       }
@@ -36,8 +42,3 @@ function traitement_img($new_id, $FILES, $POST)
     echo 'Une erreur est survenue lors de l\'envoi du fichier';
   }
 }
-var_dump($FILES);
-$photo_name = renamephoto($new_id, $FILES, $POST,);
-
-var_dump(move_uploaded_file($FILES['photo_intervention']['tmp_name'], "$directory/$photo_name"));
-echo 'Le fichier a été envoyé sur le serveur';

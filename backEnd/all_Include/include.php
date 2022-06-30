@@ -3,6 +3,7 @@ require_once 'C:\xampp\htdocs\application_Gouv_tech\backEnd\class_tech\intervent
 require_once 'C:\xampp\htdocs\application_Gouv_tech\backEnd/traitementIntervention/getNewIntervention.php';
 require_once 'C:\xampp\htdocs\application_Gouv_tech\backEnd/traitementIntervention/getInterventionInProgress.php';
 require_once 'C:\xampp\htdocs\application_Gouv_tech\backEnd\traitement_IMG\traitement_img.php';
+require_once 'C:\xampp\htdocs\application_Gouv_tech\backEnd\class_tech\img_info.php';
 $dns = 'mysql:host=localhost:3307;';
 
 $database = 'dbname=Residence_isatis;';
