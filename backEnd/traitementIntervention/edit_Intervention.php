@@ -1,12 +1,12 @@
 <?php
-var_dump(require_once '../all_Include/include.php');
+require_once '../all_Include/include.php';
 
 
 try {
   var_dump($_POST);
   // $nvintervention = new nouvelleInterventionTech();
   // var_dump($nvintervention->getIntervention($_POST));
-  $pdoBDdinterventionEnCour = new PDO('mysql:host=localhost:3307;dbname=interventionTechnique;', 'root', '');
+  $pdoBDdinterventionEnCour = new PDO('mysql:host=localhost:3307;dbname=Residence_isatis;', 'root', '');
 
   $sql = "UPDATE interventionencour SET 
   dateDemandeIntervention = :dateDemandeIntervention,
@@ -31,7 +31,6 @@ try {
   $edit_intervention->bindValue(':remarque_intervention', $nvintervention->remarque_intervention, PDO::PARAM_STR);
   $edit_intervention->bindValue(':info_statut_app', $nvintervention->info_statut_app, PDO::PARAM_STR);
   $edit_intervention->bindValue(':statut_intervention', $nvintervention->statut_intervention, PDO::PARAM_STR);
-
   $edit_intervention->execute();
 } catch (PDOException $error) {
   echo 'vous avez une erreur lors de la recupération d\'informatior veuilliez contacter le support <br>  ' . PHP_EOL;

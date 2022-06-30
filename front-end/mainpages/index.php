@@ -1,7 +1,9 @@
 <?php
 require_once '../header/header.php';
 require_once '../header/navbar.php';
-require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php'
+require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php';
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,7 +24,8 @@ require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php
     <?php
     echo $navbar ?>
   </header>
-  <form action="../../backEnd/traitementIntervention/edit_Intervention.php" method="post" class="form-inter"
+  <!-- importante to name the all the name ass ritine her for the function  -->
+  <form action="../../backEnd/traitementIntervention/getNewIntervention.php" method="post" class="form-inter"
     enctype="multipart/form-data">
     <p>dateDemandeIntervention: <input type="date" name="dateDemandeIntervention" /></p>
     <p>post: <input type="text" name="postEmployer" /></p>
@@ -33,7 +36,9 @@ require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php
     <p>date_intevention: <input type="date" name="date_intevention" /></p>
     <p>remarque: <input type="text" name="remarque_intervention" /></p>
     <p>statut_intervention: <input type="text" name="statut_intervention" /></p>
+
     <input type="file" id="photo_intervention" name="photo_intervention" accept="image/png, image/jpeg">
+
     <p><input type="submit" value="OK"></p>
   </form>
   <main>

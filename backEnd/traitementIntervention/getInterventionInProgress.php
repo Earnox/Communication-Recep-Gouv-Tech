@@ -1,12 +1,13 @@
 <?php
 
+
 function getAllInterProgress()
 {
 
 
 
   try {
-    $pdoBDdinterventionEnCour = new PDO('mysql:host=localhost:3307;dbname=interventionTechnique;', 'root', '');
+    $pdoBDdinterventionEnCour = new PDO('mysql:host=localhost:3307;dbname=Residence_isatis;', 'root', '');
     $sqlGetInterventionProgress = "
 SELECT * FROM interventionencour";
     $requetGetAllInt = $pdoBDdinterventionEnCour->prepare($sqlGetInterventionProgress);

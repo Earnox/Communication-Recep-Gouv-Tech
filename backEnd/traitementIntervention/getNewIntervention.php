@@ -1,15 +1,15 @@
 <?php
 // funtion to add a new intervention tech
-require_once '../all_Include/include.php';
-require_once '../traitement_IMG/traitement_img.php';
+require_once 'C:\xampp\htdocs\application_Gouv_tech\backEnd\all_Include\include.php';
+
 // script.php.
 
 try {
 
     $nvintervention = new nouvelleInterventionTech();
-    var_dump($nvintervention->getIntervention($_POST));
-    var_dump($_POST);
-    $pdoBDdinterventionEnCour = new PDO('mysql:host=localhost:3307;dbname=interventionTechnique;', 'root', '');
+
+    $nvintervention->getIntervention($_POST);
+    $pdoBDdinterventionEnCour = new PDO('mysql:host=localhost:3307;dbname=Residence_isatis;', 'root', '');
     $newInter = $pdoBDdinterventionEnCour->prepare(
         "INSERT INTO interventionencour( 
     dateDemandeIntervention,
@@ -43,7 +43,11 @@ try {
     $newInter->bindValue(':remarque_intervention', $nvintervention->remarque_intervention, PDO::PARAM_STR);
     $newInter->bindValue(':info_statut_app', $nvintervention->info_statut_app, PDO::PARAM_STR);
     $newInter->bindValue(':statut_intervention', $nvintervention->statut_intervention, PDO::PARAM_STR);
-    var_dump($newInter->execute());
+    $newInter->execute();
+    $last_isertID = ($pdoBDdinterventionEnCour->lastInsertId() + 1);
+    $photo = $_FILES;
+    var_dump($photo);
+    traitement_img($last_isertID, $photo, $_POST);
     return $newInter->fetchAll();
 } catch (PDOException $error) {
     echo 'vous avez une erreur lors de l\'insetion d\'informatior veuilliez contacter le support <br>  ' . PHP_EOL;
