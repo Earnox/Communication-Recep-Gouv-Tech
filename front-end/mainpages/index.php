@@ -58,8 +58,8 @@ require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php
           <th>Date de réalisation</th>
           <th>Remarques</th>
           <th>Statut</th>
-          <th>Edite</th>
           <th>Photo</th>
+          <th>Edite</th>
         </tr>
       </thead>
       <tbody>

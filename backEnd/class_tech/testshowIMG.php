@@ -61,6 +61,22 @@ try {
 
 </body>
 <table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Poste</th>
+      <th>Appartement</th>
+      <th>Nature de l'intervention</th>
+      <th>Risque</th>
+      <th>info Menage</th>
+      <th>Date de réalisation</th>
+      <th>Remarques</th>
+      <th>Statut</th>
+      <th>Photo</th>
+      <th>Edite</th>
+    </tr>
+  </thead>
   <tr>
 
     <?php $getAllInterProgress = getAllInterProgress();
@@ -79,6 +95,11 @@ try {
       }
       if ($getAllInterProgress[$i]['postEmployer']) {
         echo  "<td>" . $getAllInterProgress[$i]['postEmployer'] . "</td>";
+      } else {
+        echo  "<td>  </td>";
+      }
+      if ($getAllInterProgress[$i]['lieu']) {
+        echo  "<td>" . $getAllInterProgress[$i]['lieu'] . "</td>";
       } else {
         echo  "<td>  </td>";
       }
