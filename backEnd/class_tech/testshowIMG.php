@@ -1,6 +1,8 @@
 <?php
 require_once '../../front-end/header/header.php';
 require_once '../../front-end/header/navbar.php';
+require_once '../traitementIntervention/getInterventionInProgress.php';
+
 try {
   $pdoBDresidence = new PDO('mysql:host=localhost:3307;dbname=Residence_isatis;', 'root', '');
   $sql_Get_photo_path = "SELECT `id_tech`, `lieu_tech`, `extention_Photo` FROM `path_image`";
@@ -46,18 +48,81 @@ try {
 
     // her wil need to change the pathe to relative or not but need to change when change files 
     $path_directory_file = '../traitementIntervention/image_intervention_Tech/';
+
     $path = "$path_directory_file\\$value[id_tech]-$value[lieu_tech].$value[extention_Photo]";
 
-    echo 'test';
+    // echo 'test';
 
-    echo "<img src='$path'  alt='' width='60' height='60'>";
+    // echo "<img src='$path'  alt='' width='60' height='60'>";
   }
 
   ?>
 
 
 </body>
+<table>
+  <tr>
+
+    <?php $getAllInterProgress = getAllInterProgress();
+    for ($i = 0; $i < count($getAllInterProgress); $i++) {
 
 
+      if ($getAllInterProgress[$i]['id']) {
+        echo "<td>" . $getAllInterProgress[$i]['id'] . "</td>";
+      } else {
+        echo  "<td>  </td>";
+      }
+      if ($getAllInterProgress[$i]['dateDemandeIntervention']) {
+        echo  "<td>" . $getAllInterProgress[$i]['dateDemandeIntervention'] . "</td>";
+      } else {
+        echo  "<td>  </td>";
+      }
+      if ($getAllInterProgress[$i]['postEmployer']) {
+        echo  "<td>" . $getAllInterProgress[$i]['postEmployer'] . "</td>";
+      } else {
+        echo  "<td>  </td>";
+      }
+      if ($getAllInterProgress[$i]['nature_Intevention']) {
+        echo  "<td>" . $getAllInterProgress[$i]['nature_Intevention'] . "</td>";
+      } else {
+        echo  "<td>  </td>";
+      }
+      if ($getAllInterProgress[$i]['risque']) {
+        echo  "<td>" . $getAllInterProgress[$i]['risque'] . "</td>";
+      } else {
+        echo  "<td>  </td>";
+      }
+      if ($getAllInterProgress[$i]['info_statut_app']) {
+        echo "<td>" . $getAllInterProgress[$i]['info_statut_app'] . "</td>";
+      } else {
+        echo  "<td>  </td>";
+      }
+      if ($getAllInterProgress[$i]['date_intevention']) {
+        echo  "<td>" . $getAllInterProgress[$i]['date_intevention'] . "</td>";
+      } else {
+        echo  "<td>  </td>";
+      }
+      if ($getAllInterProgress[$i]['remarque_intervention']) {
+        echo "<td>" . $getAllInterProgress[$i]['remarque_intervention'] . "</td>";
+      } else {
+        echo  "<td>  </td>";
+      }
+      if ($getAllInterProgress[$i]['statut_intervention']) {
+        echo  "<td>" . $getAllInterProgress[$i]['statut_intervention'] . "</td>";
+      } else {
+        echo  "<td>  </td>";
+      }
+      if ($getAllInterProgress[$i]['directory_img'] !== null) {
+        $path = $getAllInterProgress[$i]['directory_img'] . $getAllInterProgress[$i]['id_tech'] . '-' . $getAllInterProgress[$i]['lieu_tech'] . '.' . $getAllInterProgress[$i]['extention_Photo'];
+        echo   "<td><img src='$path'  alt='' width='60' height='60'> </td>";
+      }
+    ?>
+    </td>
+  </tr>
+
+  <?php
+    }  ?>
+
+</table>
 
 </html>

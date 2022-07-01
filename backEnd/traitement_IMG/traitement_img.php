@@ -9,10 +9,11 @@ function renamephoto($new_id, $photo, $post)
 }
 function traitement_img($new_id, $FILES, $POST)
 {
-  $directory = 'C:\xampp\htdocs\application_Gouv_tech\backEnd\traitementIntervention\image_intervention_Tech';
+  // here change the path were wil be save the photo 
+  $directory = '../traitementIntervention/image_intervention_Tech/';
   if (!is_dir($directory)) {
 
-    var_dump(mkdir($directory, 0777));
+    mkdir($directory, 0777);
   }
   $extensions = array('jpg', 'png', 'gif');
   if (isset($FILES['photo_intervention']) && !$FILES['photo_intervention']['error']) {
@@ -25,10 +26,10 @@ function traitement_img($new_id, $FILES, $POST)
 
 
 
-        $photo_name = renamephoto($new_id, $FILES, $POST,);
+        $photo_name = renamephoto($new_id, $FILES, $POST, $directory);
         var_dump($new_id, $POST['lieu'], $fileInfo['extension']);
         $new_id_int = intval($new_id);
-        $sql_img = new img_info($new_id_int, $POST['lieu'], $fileInfo['extension']);
+        $sql_img = new img_info($new_id_int, $POST['lieu'], $fileInfo['extension'], $directory);
         $sql_img->insetPatchImage();
         //  ici il faudrat appeler la function / constructor 
         var_dump(move_uploaded_file($FILES['photo_intervention']['tmp_name'], "$directory/$photo_name"));

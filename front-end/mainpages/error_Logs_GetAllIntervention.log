@@ -4,3 +4,5 @@ Probleme insetion BDDSQLSTATE[HY000] [1049] Unknown database 'interventiontechni
 Probleme insetion BDDSQLSTATE[HY000] [1049] Unknown database 'interventiontechnique'
 Probleme insetion BDDSQLSTATE[HY000] [1049] Unknown database 'interventiontechnique'
 Probleme insetion BDDSQLSTATE[HY000] [1049] Unknown database 'interventiontechnique'
+Probleme insetion BDDSQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'interventionencour'
+Probleme insetion BDDSQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'interventionencour'

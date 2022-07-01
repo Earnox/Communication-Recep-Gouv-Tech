@@ -68,11 +68,11 @@ require_once '../../backEnd/traitementIntervention/getInterventionInProgress.php
         ?>
         <tr>
           <?php
-            foreach ($inters as $inter) {
+            foreach ($inters as $key => $value) {
             ?>
 
           <td>
-            <?php echo $inter ?>
+            <?php echo $value ?>
           </td>
           <?php
             }

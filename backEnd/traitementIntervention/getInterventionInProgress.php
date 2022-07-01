@@ -4,12 +4,20 @@
 function getAllInterProgress()
 {
 
-
-
+  // id 
+  // $dateDemandeIntervention;
+  // $postEmployer;
+  // $lieu;
+  // $nature_Intevention;
+  // $risque;
+  // $info_statut_app;
+  // $date_intevention;
+  // $remarque_intervention;
+  // $statut_intervention;
   try {
     $pdoBDdinterventionEnCour = new PDO('mysql:host=localhost:3307;dbname=Residence_isatis;', 'root', '');
     $sqlGetInterventionProgress = "
-SELECT * FROM interventionencour";
+  SELECT interventionencour.* ,path_image.* FROM interventionencour LEFT JOIN path_image ON id = path_image.id_tech; ";
     $requetGetAllInt = $pdoBDdinterventionEnCour->prepare($sqlGetInterventionProgress);
     if ($requetGetAllInt->execute()) {
 

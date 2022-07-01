@@ -10,7 +10,8 @@ try {
                 id_img INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
                 id_tech INT,
                 lieu_tech VARCHAR(255) ,        
-                extention_Photo VARCHAR(255)   
+                extention_Photo VARCHAR(255) ,
+                directory_img VARCHAR(255)     
             );') !== false) {
       echo 'bdd crée :) <br> ' . PHP_EOL;
     } else {

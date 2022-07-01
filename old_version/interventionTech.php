@@ -19,9 +19,7 @@
 
 <body>
   <header class="container-fluide sticky-top" id="headTech">
-    <img
-      src="file:///c:/xampp/htdocs/application_Gouv_tech/backEnd/traitementIntervention/image_intervention_Tech/22-chamonix.jpg"
-      alt="" width="60" height="60" />
+
     <h1 class="">Prototype Application Gouvernance</h1>
     <nav class="navMenuGouv">
       <div class="container-link-gouv">
