@@ -134,7 +134,7 @@ try {
         echo  "<td>  </td>";
       }
       if ($getAllInterProgress[$i]['directory_img'] !== null) {
-        $path = $getAllInterProgress[$i]['directory_img'] . $getAllInterProgress[$i]['id_tech'] . '-' . $getAllInterProgress[$i]['lieu_tech'] . '.' . $getAllInterProgress[$i]['extention_Photo'];
+        $path = $getAllInterProgress[$i]['directory_img'] . $getAllInterProgress[$i]['img_name'];
         echo   "<td><img src='$path'  alt='' width='60' height='60'> </td>";
       }
     ?>

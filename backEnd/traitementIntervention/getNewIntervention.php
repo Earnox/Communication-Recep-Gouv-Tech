@@ -44,10 +44,15 @@ try {
     $newInter->bindValue(':info_statut_app', $nvintervention->info_statut_app, PDO::PARAM_STR);
     $newInter->bindValue(':statut_intervention', $nvintervention->statut_intervention, PDO::PARAM_STR);
     $newInter->execute();
+
     $last_isertID = $pdoBDdinterventionEnCour->lastInsertId();
     $photo = $_FILES;
+
     // funtion to get create image to save it and return the path 
+
+
     traitement_img($last_isertID, $photo, $_POST);
+
 
     return $newInter->fetchAll();
 } catch (PDOException $error) {

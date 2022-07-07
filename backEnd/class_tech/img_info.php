@@ -2,18 +2,24 @@
 
 class img_info
 {
+  public array $file;
+  public string $img_name;
   public int $id_tech;
   public string $lieu_intervention;
   public string $extention_photo;
   public string $directory_img;
-  public function __construct(int $id_tech, string $lieu_intervention, string $extention_photo, string $directory)
+  public function __construct(int $id_tech, string $lieu_intervention, string $extention_photo, string $directory, array $files)
   {
+    $this->file = $files;
     $this->id_tech = $id_tech;
     $this->lieu_intervention = $lieu_intervention;
     $this->extention_photo = $extention_photo;
     $this->directory_img = $directory;
   }
-
+  public function rename_photo($files)
+  {
+    return $this->img_name = md5(serialize($files)) . '.' . $this->extention_photo;
+  }
 
 
   public function insetPatchImage()
@@ -27,12 +33,14 @@ class img_info
       $pdoBDresidence = new PDO('mysql:host=localhost:3307;dbname=Residence_isatis;', 'root', '');
       $sqlnewPhoto = $pdoBDresidence->prepare(
         "INSERT INTO path_Image( 
+    img_name,
     id_tech,
     lieu_tech,
     extention_photo,
     directory_img
      ) 
     VALUES(  
+    :img_name,
     :id_tech,
     :lieu_tech ,
     :extention_photo,
@@ -41,6 +49,7 @@ class img_info
       );
 
 
+      $sqlnewPhoto->bindValue(':img_name', $this->img_name, PDO::PARAM_STR);
       $sqlnewPhoto->bindValue(':id_tech', $this->id_tech, PDO::PARAM_INT);
       $sqlnewPhoto->bindValue(':lieu_tech', $this->lieu_intervention, PDO::PARAM_STR);
       $sqlnewPhoto->bindValue(':extention_photo', $this->extention_photo, PDO::PARAM_STR);

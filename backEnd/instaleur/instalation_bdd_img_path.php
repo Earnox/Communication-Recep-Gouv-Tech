@@ -8,6 +8,7 @@ try {
     echo 'bdd detruite <br> ' . PHP_EOL;
     if ($bddresidense->exec('CREATE TABLE path_Image (
                 id_img INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+                img_name Varchar(50),
                 id_tech INT,
                 lieu_tech VARCHAR(255) ,        
                 extention_Photo VARCHAR(255) ,

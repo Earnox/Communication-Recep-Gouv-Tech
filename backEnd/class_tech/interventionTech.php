@@ -1,5 +1,7 @@
 <?php
 require_once 'C:\xampp\htdocs\application_Gouv_tech\backEnd\all_Include\include.php';
+
+// classe to colectte the information of a new intervention 
 class nouvelleInterventionTech
 {
     public string $lieu;
@@ -25,8 +27,5 @@ class nouvelleInterventionTech
         $this->remarque_intervention = $post['remarque_intervention'];
         $this->statut_intervention = $post['statut_intervention'];
         return;
-    }
-    public function sendInterventionBDD()
-    {
     }
 }

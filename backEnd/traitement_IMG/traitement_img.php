@@ -7,7 +7,7 @@ function renamephoto($new_id, $photo, $post)
 
   return $new_id . "-" . $post['lieu'] . '.' . $fileInfo['extension'];
 }
-function traitement_img($new_id, $FILES, $POST)
+function traitement_img($last_isertID, $FILES, $POST)
 {
   // here change the path were wil be save the photo 
   $directory = '../traitementIntervention/image_intervention_Tech/';
@@ -24,15 +24,15 @@ function traitement_img($new_id, $FILES, $POST)
       if (in_array($fileInfo['extension'], $extensions)) {
         // Scripts à exécuter quand les contrôles sont bons. 
 
+        // $photo_name = renamephoto($new_id, $FILES, $POST, $directory);
 
-
-        $photo_name = renamephoto($new_id, $FILES, $POST, $directory);
-        var_dump($new_id, $POST['lieu'], $fileInfo['extension']);
-        $new_id_int = intval($new_id);
-        $sql_img = new img_info($new_id_int, $POST['lieu'], $fileInfo['extension'], $directory);
+        // $new_id_int = intval($new_id);
+        $sql_img = new img_info($last_isertID, $POST['lieu'], $fileInfo['extension'], $directory, $FILES);
+        $img_name = $sql_img->rename_photo($FILES);
+        echo  $img_name;
         $sql_img->insetPatchImage();
         //  ici il faudrat appeler la function / constructor 
-        var_dump(move_uploaded_file($FILES['photo_intervention']['tmp_name'], "$directory/$photo_name"));
+        var_dump(move_uploaded_file($FILES['photo_intervention']['tmp_name'], "$directory/$img_name"));
 
         echo 'Le fichier a été envoyé sur le serveur';
       } else {
